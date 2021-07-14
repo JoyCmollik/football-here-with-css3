@@ -181,6 +181,119 @@ best-players section styles
 }
 
 /* -----------------------
+latest-photos section styles
+-------------------------- */
+.latest-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    padding-top: 30px;
+}
+
+.latest-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 330px;
+    height: 340px;
+    transition: var(--transition);
+}
+
+.latest-photo-thumbnail {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.latest-photo-thumbnail:hover .empty-bar-1 {
+    transform: translateY(2px);
+}
+
+.latest-photo-thumbnail:hover .empty-bar-2 {
+    transform: translateY(4px);
+}
+
+.latest-photo-thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+.latest-photo-thumbnail a {
+    z-index: 100;
+    overflow: hidden;
+}
+
+.latest-photo-thumbnail a img {
+    display: block;
+    width: 330px;
+    height: 235px;
+    transition: var(--transition);
+}
+
+.latest-photo-thumbnail-info {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brand-text-color);
+}
+
+.empty-bar-1 {
+    z-index: 99;
+    position: absolute;
+    bottom: -8px;
+    width: 322px;
+    height: 20px;
+    background: #c6c6c6;
+    transition: var(--transition);
+}
+.empty-bar-2 {
+    z-index: 98;
+    position: absolute;
+    bottom: -16px;
+    width: 312px;
+    height: 20px;
+    background: hsla(0,0%,78%,.5);
+    transition: var(--transition);
+}
+
+.latest-photo-thumbnail-info .fas {
+    margin-left: 4px;
+    font-size: 20px;
+}
+
+.latest-photo-title {
+    margin-top: 15px;
+    position: relative;
+    color: var(--primary-text-color);
+    font-size: 24px;
+    margin: 16px 0 10px 0;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.latest-photo-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-photo-info .latest-photo-info-album {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--btn-bg-color);
+}
+
+.latest-photo-info .fa-images, .fa-clock {
+    margin-right: 4px;
+}
+
+.latest-photo-info-time {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+/* -----------------------
     FOOTER STYLES
 -------------------------- */
 footer {
