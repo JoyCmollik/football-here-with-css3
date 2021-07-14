@@ -4,11 +4,13 @@
 :root {
     --banner-bg-color: #2D25A0;
     --btn-bg-color: #E02C6D;
+    --feature-text-color: #E02C6D;
     --primary-text-color: #18191F;
     --secondary-text-color: #6C6C6C;
     --brand-text-color: #FFFFFF;
     --icon-color: #969BAB;
     --transition: all 0.2s ease-in;
+    --featured-transition: all 0.4s ease-in-out; 
 }
 
 * {
@@ -65,7 +67,7 @@ a {
 
 .btn:hover a {
     border-radius: 4px;
-    transform: translateY(-4px) scale(0.99);
+    transform: translateY(-5px) scale(0.9999);
 }
 
 /* -----------------------
@@ -294,6 +296,90 @@ latest-photos section styles
 }
 
 /* -----------------------
+featured section styles
+-------------------------- */
+.featured {
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+    width: 810px;
+    height: 506.7px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(/images/featured-pic.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 10px;
+    transition: var(--transition);
+}
+
+.featured:hover .featured-intro {
+    top: 170px;
+}
+.featured:hover .featured-title {
+    bottom: 115px;
+}
+.featured:hover .featured-intro {
+    top: 180px;
+}
+.featured:hover .featured-info {
+    bottom: 64px;
+}
+.featured:hover .featured-article-link {
+    bottom: 25px;
+}
+
+.featured-link {
+    position: absolute;
+    background: var(--btn-bg-color);
+    color: var(--brand-text-color);
+    text-transform: uppercase;
+    padding: 8px 15px;
+    top: 25px;
+    left: 25px;
+}
+
+.featured-intro {
+    position: absolute;
+    text-transform: capitalize;
+    color: var(--feature-text-color);
+    top: 255px;
+    left: 25px;
+    transition: var(--featured-transition); 
+}
+
+.featured-title {
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--brand-text-color);
+    font-size: 40px;
+    bottom: 30px;
+    left: 25px;
+    transition: var(--featured-transition); 
+}
+
+.featured-info {
+    position: absolute;
+    color: var(--brand-text-color);
+    width: 80%;
+    font-size: 14px;
+    bottom: -45px;
+    left: 25px;
+    transition: var(--featured-transition); 
+}
+
+.featured-article-link {
+    position: absolute;
+    color: var(--brand-text-color);
+    text-transform: uppercase;
+    bottom: -50px;
+    left: 25px;
+    transition: var(--featured-transition); 
+}
+
+.featured-article-link .fas {
+    color: var(--feature-text-color);
+    margin-right: 10px;
+}
+/* -----------------------
     FOOTER STYLES
 -------------------------- */
 footer {
@@ -338,3 +424,7 @@ footer {
     font-size: 18px;
     color: #000000;
 }
+
+/* -----------------------
+    MEDIA QUERIES
+-------------------------- */
