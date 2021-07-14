@@ -147,7 +147,7 @@ ul li a {
 }
 
 /* -----------------------
-best-players section styles
+BEST-PLAYERS SECTION STYLES
 -------------------------- */
 .best-players {
     padding-top: 30px;
@@ -317,9 +317,6 @@ featured section styles
 .featured:hover .featured-title {
     bottom: 115px;
 }
-.featured:hover .featured-intro {
-    top: 180px;
-}
 .featured:hover .featured-info {
     bottom: 64px;
 }
@@ -370,9 +367,14 @@ featured section styles
     position: absolute;
     color: var(--brand-text-color);
     text-transform: uppercase;
-    bottom: -50px;
+    bottom: -84px;
     left: 25px;
+    transition: var(--featured-transition);
     transition: var(--featured-transition); 
+}
+
+.featured-article-link:hover {
+    color: var(--feature-text-color);
 }
 
 .featured-article-link .fas {
@@ -383,6 +385,7 @@ featured section styles
     FOOTER STYLES
 -------------------------- */
 footer {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -390,15 +393,13 @@ footer {
     margin: 100px 0 63px 0;
 }
 
-.footer-logo img {
+footer img {
     width: 483px;
     height: 110px;
 }
 
 .footer-icons {
     display: flex;
-    /* justify-content: space-between;
-    align-items: center; */
 }
 
 .footer-icons a {
@@ -426,5 +427,180 @@ footer {
 }
 
 /* -----------------------
-    MEDIA QUERIES
+        MEDIA QUERIES
 -------------------------- */
+@media only screen and (max-width:  689px) {
+    /* universal styles */
+    .section-title {
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* header responsive */
+
+    .banner {
+        margin-top: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-info {
+       padding: 0 66px 0 16px;
+    }
+
+    .banner-info .banner-title {
+        width: 278px;
+        line-height: 50px;
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+
+    .banner-img {
+        margin-top: 50px;
+    }
+
+    .banner-img img {
+        width: 329.5px;
+        height: 270px;
+    }
+
+    /* best players responsive */
+    .best-players {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+        /* grid-column-gap: 0; */
+    }
+
+    /* latest photo responsive */
+    .latest-photos {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+    }
+
+    /* featured responsive */
+    .featured {
+        width: 405px;
+        height: 253.35px;
+    }
+
+    .featured:hover .featured-intro {
+        top: 40px;
+    }
+    .featured:hover .featured-title {
+        bottom: 100px;
+    }
+    .featured:hover .featured-info {
+        bottom: 40px;
+    }
+    .featured:hover .featured-article-link {
+        bottom: 10px;
+    }
+
+    .featured-link {
+        font-size: 10px;
+        letter-spacing: 0.8px;
+        padding: 4px 12px;
+        top: 10px;
+    }
+    
+    .featured-intro {
+        font-size: 14px;
+        top: 85px;
+    }
+    
+    .featured-title {
+        font-size: 21.5px;
+        bottom: 30px;
+    }
+    
+    .featured-info {
+        font-size: 12px;
+        bottom: -90px;
+        left: 25px;
+    }
+    
+    .featured-article-link {
+        font-size: 14px;
+        bottom: -120px;
+    }
+
+    /* footer section responsive */
+    .footer-logo {
+        margin-bottom: 29px;
+    }
+    .footer-logo img {
+        width: 60%;
+        height: 60%;
+    }
+    .footer-info {
+        margin: 20px 0 187px 0;
+    }
+}
+
+/* tab responsive */
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+    /* universal styles */
+    .section-title {
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* header responsive */
+
+    .banner {
+        margin-top: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-info {
+        padding: 0 66px 0 16px;
+     }
+ 
+     .banner-info .banner-title {
+         width: 378px;
+         line-height: 59px;
+         margin-bottom: 30px;
+         font-size: 50px;
+     }
+ 
+     .banner-img {
+         margin-top: 50px;
+     }
+ 
+     .banner-img img {
+         width: 329.5px;
+         height: 270px;
+     }
+
+     /* best players responsive */
+    .best-players {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+        /* grid-column-gap: 0; */
+    }
+
+    /* latest photo responsive */
+    .latest-photos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    }
+}
