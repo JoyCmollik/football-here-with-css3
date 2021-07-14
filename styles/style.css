@@ -319,7 +319,7 @@ featured section styles
     margin-top: 40px;
     width: 810px;
     height: 506.7px;
-    background: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.7)), url(/images/featured-pic.png);
+    background: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.7)), url(/images/featured.png);
     background-size: cover;
     background-repeat: no-repeat;
     top: 10px;
